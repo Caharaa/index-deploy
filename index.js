@@ -12,11 +12,14 @@ const Limiter = rateLimit({
 
 })
 app.use(Limiter);
+app.get('/formcloud',(req,res) =>{
+    res.status(500).json({message:"this form fromclode endpoint!"})
+})
 app.get('/',(req,res)=>{
     console.log("hellow docker!")
     res.status(500).json({message:"hellow world",req:req.body});
 })
   
-app.listen(8000,()=>{
+app.listen(4040,()=>{
     console.log('backend runing at port 8000')
 })

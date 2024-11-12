@@ -2,7 +2,7 @@ services:
   node-server:
     build: .
     ports:
-      - "8000:8000"
+      - "8000:4040"
   db:
     image: mysql:latest
     container_name: db
